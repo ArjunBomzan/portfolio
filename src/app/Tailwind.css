@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container {
+        @apply mx-auto max-w-full px-[30px] md:max-w-[960px] md:px-[15px] xl:max-w-[1100px];
+    }
+
+    .btn {
+        @apply px-4 py-2  border-solid border-[3px] border-[#b1c445] rounded-3xl text-white font-semibold transition-all duration-200 hover:bg-[#b1c445]
+    }
+    .btn2 {
+        @apply px-4 py-2  border-solid border-[2px] border-[#b1c445] rounded-3xl text-black transition-all duration-500 hover:bg-[#4547c4] hover:bg-opacity-[0.2]
+    }
+    .navigation {
+        @apply font-semibold relative text-[20px]
+        before:absolute 
+        before:bottom-0
+        before:left-0
+        before:h-[3px]
+        before:w-[0%]
+        before:content-[""]
+        before:transition-all
+        before:duration-[1s]
+        
+        before:bg-red-600
+    }
+.active_nav{ 
+    @apply before:w-full
+}
+}
