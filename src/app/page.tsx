@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container">
           <div className=" w-full lg:w-[50%] mt-8 " >
             <div className=" text-white bg-[#1d1515] bg-opacity-50 p-5">
-              <p className="text-[36px] text-white font-semibold">Hello{'&lsquo'}<span className="text-[#ff4545]">I'am </span></p>
+              <p className="text-[36px] text-white font-semibold">Hello&lsquo<span className="text-[#ff4545]">Iam </span></p>
               <div className="text-[36px] font-bold">
 
                 <Typewriter
