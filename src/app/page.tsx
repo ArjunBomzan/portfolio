@@ -25,7 +25,7 @@ export default function Home() {
               Portfolio
             </div>
             <div className='flex gap-9 list-none text-white items-center'>
-              <li className="navigation hover:active_nav">About </li>
+              <li className="navigation hover:active_nav">About</li>
               <li className="navigation hover:active_nav">Contact</li>
               <li className="navigation"><Link href={'/admin'}><FaUserAlt /></Link></li>
             </div>
