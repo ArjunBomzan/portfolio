@@ -34,9 +34,9 @@ function Card({ detail }: { detail: any }) {
                                 group-hover:block '>
                     <div className='flex gap-3 justify- flex-col'>
                         <div className='flex gap-8'>
-                            <p>Live </p>
-                            <p>Front </p>
-                            <p>Back </p>
+                            <p>Live</p>
+                            <p>Front</p>
+                            <p>Back</p>
                         </div>
                         <div className='flex gap-8'>
                              <button className='bg-black bg-opacity-50 p-2'><IoLinkOutline /></button>
