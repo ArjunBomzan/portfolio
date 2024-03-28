@@ -4,7 +4,7 @@ import React from 'react'
 function Experience({ expericence }: { expericence: ExperienceType }) {
     const data = expericence.caterogry
     return <>
-        <div className='flex '>
+        <div className=' lg:flex '>
             <div className='border-[2px] border-[green] p-10'>
                 {
                     data.map((el) => {

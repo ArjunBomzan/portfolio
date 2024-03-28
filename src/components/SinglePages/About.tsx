@@ -10,6 +10,7 @@ import { FaInstagramSquare,FaLinkedinIn  } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaViber } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useForm } from 'react-hook-form'
 export default function About({ targetRef }: { targetRef: any }) {
     const category: string[] = []
     Project.forEach((el) => {
@@ -35,7 +36,11 @@ export default function About({ targetRef }: { targetRef: any }) {
         setAboutActive(el.toLowerCase())
     }
 
-
+type FomrFiled={
+    name:string,
+    email:string,
+    description:string
+}
 
     const tempData = Project.filter((el) => {
         if (activeCategory === "all") {
@@ -46,6 +51,12 @@ export default function About({ targetRef }: { targetRef: any }) {
                 return true
         }
     })
+
+    const {register,handleSubmit,setError}=useForm<FomrFiled>()
+    const submit=(data:FomrFiled)=>{
+  
+        
+    }
    
     return (
         <>
@@ -53,7 +64,7 @@ export default function About({ targetRef }: { targetRef: any }) {
 
                 <div className='flex justify-center items-center flex-col gap-2'>
                     <p className='text-[36px] font-bold '>About me</p>
-                    <div className='hidden lg:flex gap-4'>
+                    <div className='flex gap-4'>
                         {
                             ["Expericence", "Skills", "Education"].map((cat, index) => {
 
@@ -72,8 +83,8 @@ export default function About({ targetRef }: { targetRef: any }) {
 
                     </div>
                 </div>
-                <div className=' p-3'>
-                    <div className={` ${aboutActive === "expericence" ? 'flex justify-center gap-6' : 'hidden'}`}>
+                <div className='m-4 p-3 '>
+                    <div className={` ${aboutActive === "expericence" ? 'flex flex-col lg:flex-row  justify-center gap-6' : 'hidden'}`}>
                         {
                             experience.map((el,index) => {
 
@@ -126,52 +137,78 @@ export default function About({ targetRef }: { targetRef: any }) {
 
 
                 </div>
-                <section className='container m-10 rounded-lg bg-green-500 bg-opacity-[0.7] md:flex '>
+                <section className='container  rounded-lg bg-green-500 bg-opacity-[0.7] md:flex '>
 
-                    <div className="my-10" ref={targetRef} >
-                        <p className="text-3xl font-bold text-center mb-8">Hire Me</p>
+                    <div className="" ref={targetRef} >
+                        <p className="text-3xl font-bold text-center pt-4">Hire Me</p>
 
-                        <form action="#" method="post" className="m-10 ">
+                        <form className="m-10 ">
                             <div className="flex flex-col">
                                 <label htmlFor="company" className="text-sm font-medium mb-2">Company Name</label>
-                                <input type="text" id="company" name="company" className="shadow-sm p-2 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50" required />
+                                <input 
+                                type="text" 
+                                 className="shadow-sm 
+                                 p-2 rounded-md focus:outline-none 
+                                 focus:ring focus:ring-blue-500
+                                  focus:ring-opacity-50" 
+                                  required 
+                                  {...register("name",{
+                                    required:true
+                                  })}
+                                  
+                                  />
                             </div>
 
                             <div className="flex flex-col">
                                 <label htmlFor="email" className="text-sm font-medium mb-2">Company Email</label>
-                                <input type="email" id="email" name="email" className="shadow-sm p-2 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50" required />
+                                <input
+                                 type="email"
+                                 className="shadow-sm p-2 rounded-md focus:outline-none focus:ring
+                                  focus:ring-blue-500 focus:ring-opacity-50" required 
+                                  {...register("email",{
+                                    required:true
+                                  })}
+                                  />
                             </div>
 
                             <div className="flex flex-col">
                                 <label htmlFor="description" className="text-sm font-medium mb-2">Project Description</label>
-                                <textarea id="description" name="description" className="shadow-sm p-2 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
+                                <textarea  className="shadow-sm p-2 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                                 {...register("description")}
+                                />
                             </div>
 
                             <div className="flex justify-center mt-5">
-                                <button type="submit" className="py-2 px-4 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                                <button 
+                                 className="py-2 px-4 bg-blue-500 text-white font-medium rounded-md
+                                  hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                                  
+                                  onClick={handleSubmit(submit)}
+                                  >
                                     Submit
                                 </button>
                             </div>
                         </form>
                     </div>
+                    
                     <div className='container my-10 '>
                         <p className="text-3xl font-bold text-center mb-8">Contact me</p>
-                        <div className='flex justify-between p-10'>
-                        <div className='ml-10 '>
+                        <div className='flex w-[90%] '>
+                        <div className=''>
                             <p className='font-bold text-[26px]'>Email:</p>
                             <p className='ml-10 underline'>tamangarjun9841@gmail.com</p>
                             <p className='font-bold text-[26px]'>Phone:</p>
-                            <p className='ml-10 '>+9779848911142</p>
+                            <p className='ml-10'>+9779848911142</p>
                         
                         </div>
-                        <ul className='flex gap-1 flex-col cursor-pointer'>
+                        <div className='flex gap-1 flex-col cursor-pointer list-none'>
                         <li><FaFacebookF className='inline mr-3' />Facebook</li>
                         <li><FaInstagramSquare className='inline mr-3' />Instgram</li>
                         <li><FaViber className='inline mr-3' />Viber</li>
                         <li><IoLogoWhatsapp className='inline mr-3' />WhatsApp</li>
                         <li><FaLinkedinIn className='inline mr-3' />LinkIN</li>
-                        
-                        </ul>
+                    
+                        </div>
                         </div>
                     </div>
                 </section>

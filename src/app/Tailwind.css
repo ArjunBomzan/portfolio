@@ -29,4 +29,7 @@
 .active_nav{ 
     @apply before:w-full
 }
+.list_item{ 
+    @apply px-6 py-3 font-semibold hover:bg-[#aed1ae] hover:text-white
+}
 }

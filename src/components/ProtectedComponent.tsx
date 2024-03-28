@@ -1,4 +1,6 @@
 import { ComponentType } from "react"
+import { SiTruenas } from "react-icons/si"
+import Sidebar from "./common/Sidebar"
 
 
 export default function WithProtectedRoute(Component:ComponentType){
@@ -36,7 +38,12 @@ let user=true
 
         }
         {
-            !loading && user && <Component/>
+            !loading && user && 
+            <div  className="flex w-full">
+            <Sidebar/>
+            <Component/>
+            </div>
+          
         }
     </div>
         </>

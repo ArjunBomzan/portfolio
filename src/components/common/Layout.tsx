@@ -1,16 +1,16 @@
-import React, { Children, ReactNode } from 'react'
-import Header from './Header'
-import Footer from './Footer'
+// import React, { Children, ReactNode } from 'react'
+// import Sidebar from './Sidebar'
 
-function Layout({children}:{children:ReactNode}) {
-  return (
-    <div className='bg-no-repeat bg-cover'>
-      <Header/>
-        {children}
-       <Footer/>
 
-    </div>
-  )
-}
 
-export default Layout
+// function Layout({children}:{children:ReactNode}) {
+//   return (
+//     <div className='flex  w-full' >
+//       <Sidebar/>
+//         {children}
+
+//     </div>
+//   )
+// }
+
+// export default Layout
