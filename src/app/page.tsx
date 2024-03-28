@@ -3,7 +3,7 @@ import About from "@/components/SinglePages/About";
 import { usePathname } from "next/navigation";
 import Typewriter from 'typewriter-effect'
 import { useRef } from 'react';
-import Experince from "@/components/SinglePages/Experince";
+
 import { FaUserAlt } from "react-icons/fa";
 import Link from "next/link";
 import ScrollTop from "@/components/common/ScrollTop";
