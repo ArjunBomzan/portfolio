@@ -41,9 +41,9 @@ export default function Todo() {
               <p>plus</p>
             </div>
             <div>
-              {[1, 2, 3, 4, 5].map(() => {
+              {[1, 2, 3, 4, 5].map((index) => {
                 return (
-                  <p>e</p>
+                  <p key={index}>e</p>
                 )
               })}
 
@@ -55,8 +55,8 @@ export default function Todo() {
             <p className='text-center'>Add Your List </p>
 
             <div>
-              {[1, 2, 3, 4, 5].map(() => {
-                return <p className=''>List here </p>
+              {[1, 2, 3, 4, 5].map((index) => {
+                return <p className='' key={index}>List here </p>
               })}
 
             </div>
@@ -70,8 +70,8 @@ export default function Todo() {
               <p>plus</p>
             </div>
             <div>
-              {[1, 2, 3, 4, 5].map(() => {
-                return <p className=''>List here </p>
+              {[1, 2, 3, 4, 5].map((index) => {
+                return <p className=''key={index}>List here </p>
               })}
 
             </div>
