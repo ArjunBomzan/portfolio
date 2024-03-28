@@ -14,7 +14,7 @@ export default function Todo() {
           </div>
           <ul className='m-3'>
             {[1, 2, 3, 4, 5].map((el, index) => (
-              <li className='flex justify-around mt-3'>
+              <li className='flex justify-around mt-3' key={index}>
                 <p>Hello task one</p>
                 <div className='flex gap-5 items-center'>
                 <button>  <MdFileDownloadDone className='text-[20px]'/></button>

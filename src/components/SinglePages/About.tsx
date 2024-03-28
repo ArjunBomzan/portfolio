@@ -26,7 +26,7 @@ export default function About({ targetRef }: { targetRef: any }) {
 
 
     const handleClick = (index: number, cat: string) => {
-        console.log(cat)
+        
         setActiveCategory(cat.toLowerCase())
         setActive(index)
 
