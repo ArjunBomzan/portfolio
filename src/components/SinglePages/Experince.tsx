@@ -7,15 +7,13 @@ function Experience({ expericence }: { expericence: ExperienceType }) {
         <div className=' lg:flex '>
             <div className='border-[2px] border-[green] p-10'>
                 {
-                    data.map((el) => {
-                        return <>
-
-                            <ul className='' key={el.title}>
+                    data.map((el,index) => {
+                        return  <ul className='' key={index}>
                                 <li className='font-semibold'>{el.title}</li>
-                                <small className='ml-10'>-{el.position} @{el.company} </small>
+                                <small className='ml-10'>-{el.position} {'@'}{el.company} </small>
 
                             </ul>
-                        </>
+                        
                     })
                 }
 

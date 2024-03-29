@@ -130,8 +130,8 @@ type FomrFiled={
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 p-2 gap-3'>
 
                     {
-                       tempData && tempData.map((el) => {
-                            return <Card key={el.title} detail={el} />
+                       tempData && tempData.map((el,index) => {
+                            return <Card key={index} detail={el} />
                         })
                     }
 

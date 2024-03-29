@@ -2,9 +2,11 @@ import React from 'react'
 import { IoLinkOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa"
 import { LocalImage } from '../constanst/constants';
+import Link from 'next/link';
 
 
 function Card({ detail }: { detail: any }) {
+  
     return (
         <div className='border border-green-300 group '>
             <div className='relative 
@@ -39,7 +41,7 @@ function Card({ detail }: { detail: any }) {
                             <p>Back</p>
                         </div>
                         <div className='flex gap-8'>
-                             <button className='bg-black bg-opacity-50 p-2'><IoLinkOutline /></button>
+                             <Link href={detail.liveLink} className='bg-black bg-opacity-50 p-2'><IoLinkOutline /></Link>
                             <button className='bg-black bg-opacity-50 p-2'><FaGithub /></button>
                             <button className='bg-black bg-opacity-50 p-2'><FaGithub /></button>
                         </div>
