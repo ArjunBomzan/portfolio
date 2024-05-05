@@ -11,7 +11,7 @@ function Card({ detail }: { detail: any }) {
         <div className='border border-green-300 group '>
             <div className='relative 
                             before:content-[""]
-                             before:h-[200px]
+                             before:h-full
                              before:w-full
                              before:absolute
                              before:top-0
@@ -23,7 +23,7 @@ function Card({ detail }: { detail: any }) {
                              before:hover:bg-green-600
          
                           '>
-                <img src={`${LocalImage}/${detail.image}`} alt="logo"
+                <img src={`${LocalImage}/${detail.image}`} alt="logo" 
                     className='h-[200px] object-cover overflow-hidden' />
                 <div className='absolute top-3 left-3'>
                     <p>{detail.title}</p>
@@ -41,8 +41,8 @@ function Card({ detail }: { detail: any }) {
                             <p>Back</p>
                         </div>
                         <div className='flex gap-8'>
-                             <Link href={detail.liveLink} className='bg-black bg-opacity-50 p-2'><IoLinkOutline /></Link>
-                            <button className='bg-black bg-opacity-50 p-2'><FaGithub /></button>
+                             <Link href={detail.liveLink} target='blank' className='bg-black bg-opacity-50 p-2'><IoLinkOutline /></Link>
+                             <Link href={detail.gitLink} target='blank' className='bg-black bg-opacity-50 p-2'><FaGithub /></Link>
                             <button className='bg-black bg-opacity-50 p-2'><FaGithub /></button>
                         </div>
                     </div>

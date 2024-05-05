@@ -1,4 +1,4 @@
-
+'use client'
 import Dashboard from '@/components/Dashbord/Dashboard'
 import WithProtectedRoute from '@/components/ProtectedComponent'
 

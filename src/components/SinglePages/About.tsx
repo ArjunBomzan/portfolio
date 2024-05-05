@@ -106,7 +106,7 @@ type FomrFiled={
 
 
                 </div>
-                <div className='flex justify-center items-center flex-col gap-2'>
+                <div className='flex justify-center items-center flex-col gap-2 m-4'>
                     <p className='text-[36px] font-bold '>My Projects</p>
                     <div className='hidden lg:flex gap-4'>
                         {

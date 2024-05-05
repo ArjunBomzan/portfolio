@@ -1,3 +1,4 @@
+'use client'
 import WithProtectedRoute from '@/components/ProtectedComponent'
 
 import React from 'react'

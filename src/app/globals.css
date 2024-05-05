@@ -1,3 +1,5 @@
 
 @import url('./Tailwind.css');
-
+.react-pdf__DocumentEditor {
+    display: none !important;
+  }

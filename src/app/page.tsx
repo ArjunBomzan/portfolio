@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import About from "@/components/SinglePages/About";
 import { usePathname } from "next/navigation";
 import Typewriter from 'typewriter-effect'

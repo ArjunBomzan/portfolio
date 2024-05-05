@@ -1,13 +1,21 @@
+
 import { ComponentType } from "react"
-import { SiTruenas } from "react-icons/si"
 import Sidebar from "./common/Sidebar"
+import { useRouter } from "next/navigation"
 
 
 export default function WithProtectedRoute(Component:ComponentType){
     
 const App=()=>{
+
 let loading =false
-let user=true
+let user=false
+
+const router = useRouter()
+
+if (!loading && !user) {
+    router.push('/')
+}
     return (
         <>
     

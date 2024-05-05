@@ -59,42 +59,36 @@ export const experience: ExperienceType[] = [
 
 
 export const Project: Datat[] =
-    [
+    [{
+        title: "Ecommerce",
+        image: "ecommerce.jpg",
+        gitLink: "https://github.com/ArjunBomzan/",
+        liveLink: "https://tea.digitalpalika.org/",
+        category: 'Next'
+    },
         {
             title: "Doctor Appoitmet",
-            image: "banner.png",
-            gitLink: "non",
-            liveLink: "nolive",
+            image: "appointment.png",
+            gitLink: "https://github.com/ArjunBomzan/",
+            liveLink: "#",
             category: 'MERN'
         },
         {
             title: "Job Portal",
-            image: "jobportal.avif",
-            gitLink: "non",
-            liveLink: "nolive",
+            image: "jobportal.jpg",
+            gitLink: "https://github.com/ArjunBomzan/",
+            liveLink: "#",
             category: 'MERN'
         },
         {
             title: "Attendance System",
-            image: "attendace.webp",
-            gitLink: "non",
-            liveLink: "nolive",
+            image: "attendance.jpg",
+            gitLink: "https://github.com/ArjunBomzan/",
+            liveLink: "#",
             category: 'python'
         },
-        {
-            title: "Ecommerce",
-            image: "jobportal.avif",
-            gitLink: "non",
-            liveLink: "nolive",
-            category: 'React'
-        },
-        {
-            title: "Ecommerce",
-            image: "jobportal.avif",
-            gitLink: "non",
-            liveLink: "nolive",
-            category: 'Node'
-        },
+        
+        
 
 
     ]
