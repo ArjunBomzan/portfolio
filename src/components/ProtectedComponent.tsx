@@ -13,9 +13,9 @@ let user=false
 
 const router = useRouter()
 
-if (!loading && !user) {
-    router.push('/')
-}
+// if (!loading && !user) {
+//     router.push('/')
+// }
     return (
         <>
     
